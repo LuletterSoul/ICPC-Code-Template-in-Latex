@@ -1,0 +1,323 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{xeCJK}
+\usepackage{amsmath, amsthm}
+\usepackage{listings,xcolor}
+\usepackage{geometry} % 设置页边距
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\usepackage{setspace}
+\usepackage{fancyhdr} % 自定义页眉页脚
+
+
+
+\linespread{1.2}
+
+\title{Template For ICPC}
+\author{Aether}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagestyle{fancy}
+
+\lhead{\CJKfamily{kai} Template By Aether} %以下分别为左中右的页眉和页脚
+\chead{}
+
+\rhead{\CJKfamily{kai} 第 \thepage 页}
+\lfoot{} 
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+%\geometry{left=2.5cm,right=3cm,top=2.5cm,bottom=2.5cm} % 页边距
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\setlength{\columnsep}{30pt}
+
+\makeatletter
+
+\makeatother
+
+
+
+\lstset{
+    language    = c++,
+    numbers     = left,
+    numberstyle={                               % 设置行号格式
+        \small
+        \color{black}
+        \fontspec{Consolas}
+    },
+	commentstyle = \color[RGB]{0,128,0}\bfseries, %代码注释的颜色
+	keywordstyle={                              % 设置关键字格式
+        \color[RGB]{40,40,255}
+        \fontspec{Consolas Bold}
+        \bfseries
+    },
+	stringstyle={                               % 设置字符串格式
+        \color[RGB]{128,0,0}
+        \fontspec{Consolas}
+        \bfseries
+    },
+	basicstyle={                                % 设置代码格式
+        \fontspec{Consolas}
+        \small\ttfamily
+    },
+	emphstyle=\color[RGB]{112,64,160},          % 设置强调字格式
+    breaklines=true,                            % 设置自动换行
+    tabsize     = 4,
+    frame       = single,%主题
+    columns     = fullflexible,
+    rulesepcolor = \color{red!20!green!20!blue!20}, %设置边框的颜色
+    showstringspaces = false, %不显示代码字符串中间的空格标记
+	escapeinside={\%*}{*)},
+}
+
+\begin{document}
+\title{ICPC Templates}
+\author {Shanda}
+\maketitle
+\tableofcontents
+\newpage
+\section{基础算法}
+\subsection{快速排序}
+\subsubsection{模板}
+\lstinputlisting{基础算法/快速排序/Quicksort.cpp}
+\subsubsection{第k个数}
+\lstinputlisting{基础算法/快速排序/第k个数.cpp}
+\subsection{归并排序}
+\subsubsection{模板}
+\lstinputlisting{基础算法/归并排序/Mergesort.cpp}
+\subsubsection{逆序对数量}
+\lstinputlisting{基础算法/归并排序/逆序对数量.cpp}
+\subsection{二分}
+\subsubsection{数的范围}
+\lstinputlisting{基础算法/二分/数的范围.cpp}
+\subsubsection{数的三次方根}
+\lstinputlisting{基础算法/二分/数的三次方根.cpp}
+\subsection{高精度运算}
+\subsubsection{加法}
+\lstinputlisting{基础算法/高精度运算/加法.cpp}
+\subsubsection{减法}
+\lstinputlisting{基础算法/高精度运算/减法.cpp}
+\subsubsection{乘法}
+\lstinputlisting{基础算法/高精度运算/乘法.cpp}
+\subsubsection{除法}
+\lstinputlisting{基础算法/高精度运算/除法.cpp}
+\subsection{前缀与差分}
+\subsubsection{前缀和}
+\lstinputlisting{基础算法/前缀与差分/前缀和.cpp}
+\subsubsection{子矩阵的和}
+\lstinputlisting{基础算法/前缀与差分/子矩阵的和.cpp}
+\subsubsection{差分}
+\lstinputlisting{基础算法/前缀与差分/差分.cpp}
+\subsubsection{差分矩阵}
+\lstinputlisting{基础算法/前缀与差分/差分矩阵.cpp}
+\subsection{双指针算法}
+\subsubsection{最长连续不重复子序列}
+\lstinputlisting{基础算法/双指针算法/最长连续不重复子序列.cpp}
+\subsubsection{数组元素的目标和}
+\lstinputlisting{基础算法/双指针算法/数组元素的目标和.cpp}
+\subsubsection{判断子序列}
+\lstinputlisting{基础算法/双指针算法/判断子序列.cpp}
+\subsection{位运算}
+\subsubsection{二进制中1的个数}
+\lstinputlisting{基础算法/位运算/二进制中1的个数.cpp}
+\subsection{离散化}
+\subsubsection{区间和}
+\begin{spacing}{1.5}
+\input{基础算法/离散化/区间和.tex}
+\end{spacing}
+\lstinputlisting{基础算法/离散化/区间和.cpp}
+\subsection{区间合并}
+\subsubsection{区间合并}
+\lstinputlisting{基础算法/区间合并/区间合并.cpp}
+\section{数据结构}
+\subsection{单链表}
+\lstinputlisting{数据结构/单链表.cpp}
+\subsection{双链表}
+\lstinputlisting{数据结构/双链表.cpp}
+\subsection{模拟栈}
+\lstinputlisting{数据结构/模拟栈.cpp}
+\subsection{模拟队列}
+\lstinputlisting{数据结构/模拟队列.cpp}
+\subsection{单调栈}
+\lstinputlisting{数据结构/单调栈.cpp}
+\subsection{单调队列}
+\lstinputlisting{数据结构/单调队列.cpp}
+\subsection{kmp}
+\lstinputlisting{数据结构/kmp.cpp}
+\subsection{Trie树}
+\lstinputlisting{数据结构/Trie树.cpp}
+\subsection{最大异或树}
+\lstinputlisting{数据结构/最大异或树.cpp}
+\subsection{并查集}
+\subsubsection{合并集合}
+\lstinputlisting{数据结构/并查集/合并集合.cpp}
+\subsubsection{连通块中点的数量}
+\lstinputlisting{数据结构/并查集/连通块中点的数量.cpp}
+\subsubsection{食物链}
+\lstinputlisting{数据结构/并查集/食物链.cpp}
+\subsection{堆}
+\subsubsection{堆排序}
+\lstinputlisting{数据结构/堆/堆排序.cpp}
+\subsubsection{模拟堆}
+\lstinputlisting{数据结构/堆/模拟堆.cpp}
+\subsection{哈希表}
+\subsubsection{模拟散列表}
+\lstinputlisting{数据结构/哈希表/模拟散列表.cpp}
+\subsubsection{字符串哈希}
+\lstinputlisting{数据结构/哈希表/字符串哈希.cpp}
+\section{搜索与图论}
+\subsection{DFS}
+\subsubsection{排列数字}
+\lstinputlisting{搜索与图论/DFS/排列数字.cpp}
+\subsubsection{n皇后问题}
+\lstinputlisting{搜索与图论/DFS/n皇后问题.cpp}
+\subsection{BFS}
+\subsubsection{走迷宫}
+\lstinputlisting{搜索与图论/BFS/走迷宫.cpp}
+\subsubsection{八重码}
+\lstinputlisting{搜索与图论/BFS/八重码.cpp}
+\subsection{树与图的DFS}
+\subsubsection{树的重心}
+\lstinputlisting{搜索与图论/树与图的DFS/树的重心.cpp}
+\subsection{树与图的BFS}
+\subsubsection{图中点的层次}
+\lstinputlisting{搜索与图论/树与图的BFS/图中点的层次.cpp}
+\subsection{拓扑排序}
+\subsubsection{有向图的拓扑排序}
+\lstinputlisting{搜索与图论/拓扑排序/有向图的拓扑排序.cpp}
+\subsection{Dijkstra}
+\subsubsection{求最短路1}
+\lstinputlisting{搜索与图论/Dijkstra/求最短路1.cpp}
+\subsubsection{求最短路2}
+\lstinputlisting{搜索与图论/Dijkstra/求最短路2.cpp}
+\subsection{Bellman-Ford}
+\subsubsection{有边数限制的最短路}
+\lstinputlisting{搜索与图论/Bellman-Ford/有边数限制的最短路.cpp}
+\subsection{SPFA}
+\subsubsection{SPFA求最短路}
+\lstinputlisting{搜索与图论/SPFA/SPFA求最短路.cpp}
+\subsubsection{SPFA判断负环}
+\lstinputlisting{搜索与图论/SPFA/SPFA判断负环.cpp}
+\subsection{Floyd}
+\subsubsection{Floyd求最短路}
+\lstinputlisting{搜索与图论/Floyd/Floyd求最短路.cpp}
+\subsection{最小生成树}
+\subsubsection{Kruskal}
+\lstinputlisting{搜索与图论/最小生成树/Kruskal.cpp}
+\subsubsection{Prim}
+\lstinputlisting{搜索与图论/最小生成树/Prim.cpp}
+\subsection{二分图}
+\subsubsection{染色法判定二分图}
+\lstinputlisting{搜索与图论/二分图/染色法判定二分图.cpp}
+\subsubsection{匈牙利算法求二分最大匹配}
+\lstinputlisting{搜索与图论/二分图/匈牙利算法求二分最大匹配.cpp}
+\section{数论}
+\subsection{质数}
+\subsubsection{试除法判定质数}
+\lstinputlisting{数论/质数/试除法判定质数.cpp}
+\subsubsection{分解质因数}
+\lstinputlisting{数论/质数/分解质因数.cpp}
+\subsubsection{筛质数}
+\lstinputlisting{数论/质数/筛质数.cpp}
+\subsection{约数}
+\subsubsection{试除法求约数}
+\lstinputlisting{数论/约数/试除法求约数.cpp}
+\subsubsection{约数个数}
+\lstinputlisting{数论/约数/约数个数.cpp}
+\subsubsection{约数之和}
+\lstinputlisting{数论/约数/约数之和.cpp}
+\subsubsection{最大公约数}
+\lstinputlisting{数论/约数/最大公约数.cpp}
+\subsection{欧拉函数}
+\subsubsection{欧拉函数}
+\lstinputlisting{数论/欧拉函数/欧拉函数.cpp}
+\subsubsection{筛法求欧拉函数}
+\lstinputlisting{数论/欧拉函数/筛法求欧拉函数.cpp}
+\subsection{快速幂}
+\subsubsection{快速幂}
+\lstinputlisting{数论/快速幂/快速幂.cpp}
+\subsubsection{快速幂求逆元}
+\lstinputlisting{数论/快速幂/快速幂求逆元.cpp}
+\subsection{扩展欧几里得算法}
+\subsubsection{扩展欧几里得算法}
+\lstinputlisting{数论/扩展欧几里得算法/扩展欧几里得算法.cpp}
+\subsubsection{线性同余方程}
+\lstinputlisting{数论/扩展欧几里得算法/线性同余方程.cpp}
+\subsection{中国剩余定理}
+\subsubsection{表达整数的奇怪方式}
+\lstinputlisting{数论/中国剩余定理/表达整数的奇怪方式.cpp}
+\subsection{高斯消元}
+\subsubsection{高斯消元解线性方程组}
+\lstinputlisting{数论/高斯消元/高斯消元解线性方程组.cpp}
+\subsubsection{高斯消元解异或线性方程组}
+\lstinputlisting{数论/高斯消元/高斯消元解异或线性方程组.cpp}
+\subsection{求组合数}
+\subsubsection{上三角法}
+\lstinputlisting{数论/求组合数/上三角法.cpp}
+\subsubsection{小费马定理与逆元法}
+\lstinputlisting{数论/求组合数/小费马定理与逆元法.cpp}
+\subsubsection{卢卡斯定理}
+\lstinputlisting{数论/求组合数/卢卡斯定理.cpp}
+\subsubsection{高精度}
+\lstinputlisting{数论/求组合数/高精度.cpp}
+\subsubsection{卡特兰数}
+\lstinputlisting{数论/求组合数/卡特兰数.cpp}
+\subsection{容斥原理}
+\subsubsection{能被整除的数}
+\lstinputlisting{数论/容斥原理/能被整除的数.cpp}
+\subsection{博弈论}
+\subsubsection{Nim游戏}
+\lstinputlisting{数论/博弈论/Nim游戏.cpp}
+\subsubsection{台阶-Nim游戏}
+\lstinputlisting{数论/博弈论/台阶-Nim游戏.cpp}
+\subsubsection{集合-Nim游戏}
+\lstinputlisting{数论/博弈论/集合-Nim游戏.cpp}
+\subsubsection{拆分-Nim游戏}
+\lstinputlisting{数论/博弈论/拆分-Nim游戏.cpp}
+\section{动态规划}
+\subsection{背包问题}
+\subsubsection{01背包问题}
+\lstinputlisting{动态规划/背包问题/01背包问题.cpp}
+\subsubsection{完全背包问题}
+\lstinputlisting{动态规划/背包问题/完全背包问题.cpp}
+\subsubsection{多重背包问题}
+\lstinputlisting{动态规划/背包问题/多重背包问题.cpp}
+\subsubsection{多重背包问题2}
+\lstinputlisting{动态规划/背包问题/多重背包问题2.cpp}
+\subsubsection{分组背包问题}
+\lstinputlisting{动态规划/背包问题/分组背包问题.cpp}
+\subsection{线性DP}
+\subsubsection{数字三角形}
+\lstinputlisting{动态规划/线性DP/数字三角形.cpp}
+\subsubsection{最长上升子序列}
+\lstinputlisting{动态规划/线性DP/最长上升子序列.cpp}
+\subsubsection{最长上升子序列2}
+\lstinputlisting{动态规划/线性DP/最长上升子序列2.cpp}
+\subsubsection{最长公共子序列}
+\lstinputlisting{动态规划/线性DP/最长公共子序列.cpp}
+\subsubsection{最短编辑距离}
+\lstinputlisting{动态规划/线性DP/最短编辑距离.cpp}
+\subsection{区间DP}
+\subsubsection{石子合并}
+\lstinputlisting{动态规划/区间DP/石子合并.cpp}
+\subsection{计数类DP}
+\subsubsection{整数划分}
+\lstinputlisting{动态规划/计数类DP/整数划分.cpp}
+\subsection{数位统计DP}
+\subsubsection{计数问题}
+\lstinputlisting{动态规划/数位统计DP/计数问题.cpp}
+\subsection{状态压缩DP}
+\subsubsection{最短Hamilton路径}
+\lstinputlisting{动态规划/状态压缩DP/最短Hamilton路径.cpp}
+\subsubsection{蒙德里安的梦想}
+\lstinputlisting{动态规划/状态压缩DP/蒙德里安的梦想.cpp}
+\subsection{树形DP}
+\subsubsection{没有上司的舞会}
+\lstinputlisting{动态规划/树形DP/没有上司的舞会.cpp}
+\subsection{记忆化搜索}
+\subsubsection{滑雪}
+\lstinputlisting{动态规划/记忆化搜索/滑雪.cpp}
+\end{document}
